@@ -20,7 +20,8 @@ services:
       - DB_USER=devuser
       - DB_PASS=changeme
     depends_on:
-      - db
+      - "db"
+    restart: always
 
   db:
     image: postgres:13-alpine
